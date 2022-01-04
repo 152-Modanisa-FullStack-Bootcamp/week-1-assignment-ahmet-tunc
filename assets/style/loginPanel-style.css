@@ -1,0 +1,76 @@
+html{
+    height: 100%;
+}
+body{
+    background: linear-gradient(to right, #0066cc 0%, #9933ff 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+
+.panel{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 8px;
+}
+
+.panel .panel-head{
+    border-bottom: 1px solid rgb(207, 203, 203);
+    text-align: center;
+    width: 100%;
+    font-family: monospace;
+}
+
+
+.panel .form-control input{
+    border-top: unset !important;
+    border-right: unset !important;
+    border-left: unset !important;
+    font-size: 14px;
+    border-color: rgb(196, 193, 193);
+    margin: 20px 0;
+    width: 280px;
+    line-height: 30px;
+}
+
+
+.forgot-pass a{
+    color: gray;
+    text-decoration: none;
+}
+
+.forgot-pass a:hover{
+    text-decoration: underline;
+}
+
+.form-button input{
+    background-color: rgb(72, 161, 245);
+    width: 100%;
+    color: white;
+    margin: 20px 0;
+    border-radius: 30px;
+    padding: 10px 0;
+    border:unset !important;
+}
+
+.form-button input:hover{
+    background-color: rgb(21, 137, 245);
+    cursor: pointer;
+}
+
+.panel-footer{
+    margin: 0 0 20px 0;
+}
+
+.panel-footer a{
+    text-decoration: none;
+    color: rgb(44, 134, 236);
+}

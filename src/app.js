@@ -10,20 +10,43 @@ axios
     // Assign data field of the response to
     // products variable below by destructuring
     // You can use alias
-    const products = null;
+    console.log(response);
+    const products = response.data;
+    
+    products.forEach(element => {
+      console.log(element.name);
+    });
+    let filterObject = []
+    let filter = products.filter(x => x.name.includes('Şal'));
+    console.log(filter);
 
-    // Print names of all product to the console
-    // by calling foreach  method (use arrow function)
+   let deneme = filter.forEach(element => { 
+    filterObject.push(
+      {
+        name:element.name,
+        image:element.image
+      }
+    )
+   });
 
-    // Get all products that contain "Şal" in their name (use filter method)
-    // map filtered products to new object having only image and name field
-    // assign mapped items to mappedProducts variable
-    const mappedProducts = null;
+    console.log(filterObject);
 
-    // Display the images and names of mappedProducts
-    // You need to add them to the DOM
-    // you need to use forEach method
-    // You need to use flexbox
-    // Position of image and text is up to you
-    // You can use any style you wish
+    const mappedProducts = filterObject;
+ 
+    mappedProducts.forEach(element=>{
+        let div = document.createElement("div");
+        div.className = "post";
+        let postImage = document.createElement("div");
+        postImage.className = "post-image";
+        let img = document.createElement("img");
+        img.src = element.image;
+        let text = document.createElement("div");
+        text.className = "post-text";
+        text.innerHTML = element.name;
+
+        postImage.appendChild(img);
+        div.appendChild(postImage);
+        div.appendChild(text);
+        document.getElementsByClassName("all-post")[0].appendChild(div);
+    })
   });
