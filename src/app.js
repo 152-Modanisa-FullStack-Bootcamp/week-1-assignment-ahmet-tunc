@@ -20,7 +20,7 @@ axios
     let filter = products.filter(x => x.name.includes('Şal'));
     console.log(filter);
 
-   let deneme = filter.forEach(element => { 
+    filter.forEach(element => { 
     filterObject.push(
       {
         name:element.name,
